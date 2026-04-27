@@ -12,7 +12,7 @@ const characterMap = {
     '*': '＊'
 };
 
-export const sanitizeString = (string) => {
+const sanitizeString = (string) => {
     // remove any potential control characters the string might contain
     string = string.replace(/[\u0000-\u001F\u007F-\u009F]/g, "");
 

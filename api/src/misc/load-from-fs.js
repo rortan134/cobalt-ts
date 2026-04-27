@@ -7,7 +7,7 @@ const root = join(
     '../../'
 );
 
-export function loadFile(path) {
+function loadFile(path) {
     return fs.readFileSync(join(root, path), 'utf-8')
 }
 

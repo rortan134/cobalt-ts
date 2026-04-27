@@ -1,0 +1,44 @@
+{
+    "name": "cobalt-ts-sdk",
+    "version": "0.0.0-dev",
+    "description": "TypeScript SDK for Cobalt APIs.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/imputnet/cobalt.git",
+        "directory": "sdk/typescript"
+    },
+    "type": "module",
+    "engines": {
+        "node": ">=18"
+    },
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "clean": "rm -rf dist",
+        "build": "tsup",
+        "build:watch": "tsup --watch",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "coverage": "jest --coverage",
+        "prepare": "bun run build"
+    },
+    "devDependencies": {
+        "@types/jest": "^30.0.0",
+        "ts-jest": "^29.4.9",
+        "@types/node": "^25.6.0",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.5.1",
+        "typescript": "^6.0.3",
+        "zod": "^4.3.6"
+    }
+}
